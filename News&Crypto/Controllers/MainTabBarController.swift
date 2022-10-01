@@ -6,7 +6,7 @@ import UIKit
 // MARK: - Properties
 // MARK: Public
 // MARK: Private
-// MARK: - Lifecycle
+
 // MARK: - API
 // MARK: - Setups
 // MARK: - Helpers
@@ -17,6 +17,7 @@ final class MainTabBarController: UITabBarController {
     private let settingsViewController = SettingsViewController()
     private let walletTableViewController = WalletTableTableViewController()
 
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabBar()
