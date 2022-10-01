@@ -47,9 +47,9 @@ struct CoinModel: Identifiable, Codable {
 //        case currentHoldings
 //    }
     
-    var rank: Int {
-        return Int(marketCapRank ?? 0)
-    }
+//    var rank: Int {
+//        return Int(marketCapRank ?? 0)
+//    }
 }
 
 // MARK: - SparklineIn7D
