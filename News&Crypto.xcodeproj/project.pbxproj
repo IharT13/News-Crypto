@@ -20,6 +20,11 @@
 		35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8928D5E68700079729 /* News_Crypto.xcdatamodeld */; };
 		35D25F8D28D5E68A00079729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35D25F8C28D5E68A00079729 /* Assets.xcassets */; };
 		35D25F9028D5E68A00079729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35D25F8E28D5E68A00079729 /* LaunchScreen.storyboard */; };
+		35E75B3028EE1D0300D7EB22 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E75B2B28EE1D0300D7EB22 /* Montserrat-Regular.ttf */; };
+		35E75B3128EE1D0300D7EB22 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E75B2C28EE1D0300D7EB22 /* Montserrat-Bold.ttf */; };
+		35E75B3228EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E75B2D28EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf */; };
+		35E75B3328EE1D0300D7EB22 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E75B2E28EE1D0300D7EB22 /* Montserrat-Light.ttf */; };
+		35E75B3428EE1D0300D7EB22 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35E75B2F28EE1D0300D7EB22 /* Montserrat-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,11 @@
 		35D25F8C28D5E68A00079729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35D25F8F28D5E68A00079729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35D25F9128D5E68A00079729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35E75B2B28EE1D0300D7EB22 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		35E75B2C28EE1D0300D7EB22 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		35E75B2D28EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		35E75B2E28EE1D0300D7EB22 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		35E75B2F28EE1D0300D7EB22 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		88213DE6CA5CA97E2438CB2A /* Pods-News&Crypto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News&Crypto.debug.xcconfig"; path = "Target Support Files/Pods-News&Crypto/Pods-News&Crypto.debug.xcconfig"; sourceTree = "<group>"; };
 		C04A53CEA37FD74161597F57 /* Pods_News_Crypto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News_Crypto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,6 +113,7 @@
 		35D25F7F28D5E68700079729 /* News&Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				35E75B2A28EE1CC300D7EB22 /* Font */,
 				3566080628DDFE3B001848A8 /* Models */,
 				3566080328DDFC84001848A8 /* Managers */,
 				356607FC28DDF5C0001848A8 /* Controllers */,
@@ -116,13 +127,24 @@
 			path = "News&Crypto";
 			sourceTree = "<group>";
 		};
+		35E75B2A28EE1CC300D7EB22 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				35E75B2C28EE1D0300D7EB22 /* Montserrat-Bold.ttf */,
+				35E75B2D28EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf */,
+				35E75B2E28EE1D0300D7EB22 /* Montserrat-Light.ttf */,
+				35E75B2F28EE1D0300D7EB22 /* Montserrat-Medium.ttf */,
+				35E75B2B28EE1D0300D7EB22 /* Montserrat-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		9A8BF1532426FF08D4F81C52 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				88213DE6CA5CA97E2438CB2A /* Pods-News&Crypto.debug.xcconfig */,
 				1A0EE22A049942FAF34CBF91 /* Pods-News&Crypto.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -194,6 +216,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E75B3328EE1D0300D7EB22 /* Montserrat-Light.ttf in Resources */,
+				35E75B3228EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf in Resources */,
+				35E75B3128EE1D0300D7EB22 /* Montserrat-Bold.ttf in Resources */,
+				35E75B3428EE1D0300D7EB22 /* Montserrat-Medium.ttf in Resources */,
+				35E75B3028EE1D0300D7EB22 /* Montserrat-Regular.ttf in Resources */,
 				35D25F9028D5E68A00079729 /* LaunchScreen.storyboard in Resources */,
 				35D25F8D28D5E68A00079729 /* Assets.xcassets in Resources */,
 			);
