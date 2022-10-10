@@ -14,6 +14,8 @@
 		3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080428DDFCB5001848A8 /* NetworkingManager.swift */; };
 		3566080828DDFE4E001848A8 /* NewsStoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080728DDFE4E001848A8 /* NewsStoryModel.swift */; };
 		3566080A28DDFE7E001848A8 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080928DDFE7E001848A8 /* CoinModel.swift */; };
+		357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357B1D0228F4AAB0005DCB0A /* CoinViewController.swift */; };
+		357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357B1D0428F4AACD005DCB0A /* NewsTableViewController.swift */; };
 		35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8028D5E68700079729 /* AppDelegate.swift */; };
 		35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8228D5E68700079729 /* SceneDelegate.swift */; };
 		35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8428D5E68700079729 /* MainTabBarController.swift */; };
@@ -35,6 +37,8 @@
 		3566080428DDFCB5001848A8 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		3566080728DDFE4E001848A8 /* NewsStoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsStoryModel.swift; sourceTree = "<group>"; };
 		3566080928DDFE7E001848A8 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		357B1D0228F4AAB0005DCB0A /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
+		357B1D0428F4AACD005DCB0A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		35D25F7D28D5E68700079729 /* News&Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News&Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D25F8028D5E68700079729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D25F8228D5E68700079729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 				356607FD28DDF5D5001848A8 /* HomeViewController.swift */,
 				356607FF28DDF5EB001848A8 /* SettingsViewController.swift */,
 				3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */,
+				357B1D0228F4AAB0005DCB0A /* CoinViewController.swift */,
+				357B1D0428F4AACD005DCB0A /* NewsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,8 +286,10 @@
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
+				357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */,
 				3566080828DDFE4E001848A8 /* NewsStoryModel.swift in Sources */,
 				35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */,
+				357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */,
 				3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */,
 				3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */,
 				3566080228DDF61D001848A8 /* WalletTableTableViewController.swift in Sources */,
