@@ -17,6 +17,8 @@
 		357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357B1D0228F4AAB0005DCB0A /* CoinViewController.swift */; };
 		357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357B1D0428F4AACD005DCB0A /* NewsTableViewController.swift */; };
 		357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357B1D0628F4ABFF005DCB0A /* AddInvestmentsViewController.swift */; };
+		359D201128FEEE2E001AFA9D /* CoinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201028FEEE2E001AFA9D /* CoinTableViewCell.swift */; };
+		359D201428FEEF8F001AFA9D /* CryptoLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */; };
 		35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8028D5E68700079729 /* AppDelegate.swift */; };
 		35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8228D5E68700079729 /* SceneDelegate.swift */; };
 		35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8428D5E68700079729 /* MainTabBarController.swift */; };
@@ -41,6 +43,8 @@
 		357B1D0228F4AAB0005DCB0A /* CoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewController.swift; sourceTree = "<group>"; };
 		357B1D0428F4AACD005DCB0A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		357B1D0628F4ABFF005DCB0A /* AddInvestmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInvestmentsViewController.swift; sourceTree = "<group>"; };
+		359D201028FEEE2E001AFA9D /* CoinTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewCell.swift; sourceTree = "<group>"; };
+		359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoLineChartView.swift; sourceTree = "<group>"; };
 		35D25F7D28D5E68700079729 /* News&Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News&Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D25F8028D5E68700079729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D25F8228D5E68700079729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 		356607FC28DDF5C0001848A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				359D200F28FEEE1F001AFA9D /* Cells */,
 				35D25F8428D5E68700079729 /* MainTabBarController.swift */,
 				356607FD28DDF5D5001848A8 /* HomeViewController.swift */,
 				356607FF28DDF5EB001848A8 /* SettingsViewController.swift */,
@@ -101,6 +106,22 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		359D200F28FEEE1F001AFA9D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				359D201028FEEE2E001AFA9D /* CoinTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		359D201228FEEF43001AFA9D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		35D25F7428D5E68700079729 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +143,7 @@
 		35D25F7F28D5E68700079729 /* News&Crypto */ = {
 			isa = PBXGroup;
 			children = (
+				359D201228FEEF43001AFA9D /* Views */,
 				35E75B2A28EE1CC300D7EB22 /* Font */,
 				3566080628DDFE3B001848A8 /* Models */,
 				3566080328DDFC84001848A8 /* Managers */,
@@ -288,10 +310,12 @@
 				356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */,
 				357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */,
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
+				359D201428FEEF8F001AFA9D /* CryptoLineChartView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
 				357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */,
 				3566080828DDFE4E001848A8 /* NewsStoryModel.swift in Sources */,
+				359D201128FEEE2E001AFA9D /* CoinTableViewCell.swift in Sources */,
 				35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */,
 				357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */,
 				3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */,
