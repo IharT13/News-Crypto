@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		25C35CFEC8903404F83D115D /* Pods_News_Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04A53CEA37FD74161597F57 /* Pods_News_Crypto.framework */; };
+		350916882903429F00113A8E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350916872903429F00113A8E /* CoreDataManager.swift */; };
 		356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FD28DDF5D5001848A8 /* HomeViewController.swift */; };
 		3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FF28DDF5EB001848A8 /* SettingsViewController.swift */; };
 		3566080228DDF61D001848A8 /* WalletTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		1A0EE22A049942FAF34CBF91 /* Pods-News&Crypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News&Crypto.release.xcconfig"; path = "Target Support Files/Pods-News&Crypto/Pods-News&Crypto.release.xcconfig"; sourceTree = "<group>"; };
+		350916872903429F00113A8E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		356607FD28DDF5D5001848A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		356607FF28DDF5EB001848A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableTableViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				3566080428DDFCB5001848A8 /* NetworkingManager.swift */,
+				350916872903429F00113A8E /* CoreDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				359D201428FEEF8F001AFA9D /* CryptoLineChartView.swift in Sources */,
 				359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
+				350916882903429F00113A8E /* CoreDataManager.swift in Sources */,
 				359D202329027860001AFA9D /* Transfers.swift in Sources */,
 				359D203A29029A16001AFA9D /* UILabel+.swift in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
