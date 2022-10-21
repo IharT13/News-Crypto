@@ -240,7 +240,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     private func addInvestmentsLabelSetups() {
         investmentsLabel.text = "My Investments"
-        investmentsLabel.font = .altone(20, .medium)
+        investmentsLabel.font = .montserrat(20, .medium)
     }
     
     private func addCountNotesLabelSetups() {
@@ -251,7 +251,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     }
     
     private func addWelcomeLabelSetups() {
-        welcomeLabel.font = .altone(15, .light)
+        welcomeLabel.font = .montserrat(15, .regular)
         welcomeLabel.textColor = .gray
     }
     
@@ -295,11 +295,11 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
         dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.title!,
-            NSAttributedString.Key.font: UIFont.altone(30, .bold)
+            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
         ]
         let secondAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.accent!,
-            NSAttributedString.Key.font: UIFont.altone(30, .bold)
+            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
         ]
         
         let firstString = NSMutableAttributedString(string: "You have ", attributes: firstAttributes)

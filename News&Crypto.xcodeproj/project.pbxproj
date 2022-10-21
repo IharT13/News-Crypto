@@ -29,6 +29,11 @@
 		359D202A29027B52001AFA9D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202929027B52001AFA9D /* UITextField+.swift */; };
 		359D202C29027CB5001AFA9D /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202B29027CB5001AFA9D /* NewsTableViewCell.swift */; };
 		359D202F29027DB3001AFA9D /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202E29027DB3001AFA9D /* String+.swift */; };
+		359D20312902887D001AFA9D /* DateFormatter+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D20302902887D001AFA9D /* DateFormatter+.swift */; };
+		359D2033290288D9001AFA9D /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D2032290288D9001AFA9D /* UIColor+.swift */; };
+		359D203529028927001AFA9D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203429028927001AFA9D /* UIView+.swift */; };
+		359D203729029896001AFA9D /* InvestmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */; };
+		359D203A29029A16001AFA9D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203929029A16001AFA9D /* UILabel+.swift */; };
 		35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8028D5E68700079729 /* AppDelegate.swift */; };
 		35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8228D5E68700079729 /* SceneDelegate.swift */; };
 		35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8428D5E68700079729 /* MainTabBarController.swift */; };
@@ -65,6 +70,11 @@
 		359D202929027B52001AFA9D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		359D202B29027CB5001AFA9D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		359D202E29027DB3001AFA9D /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		359D20302902887D001AFA9D /* DateFormatter+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+.swift"; sourceTree = "<group>"; };
+		359D2032290288D9001AFA9D /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		359D203429028927001AFA9D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		359D203929029A16001AFA9D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		35D25F7D28D5E68700079729 /* News&Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News&Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D25F8028D5E68700079729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D25F8228D5E68700079729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +141,7 @@
 			children = (
 				359D201028FEEE2E001AFA9D /* CoinTableViewCell.swift */,
 				359D202B29027CB5001AFA9D /* NewsTableViewCell.swift */,
+				359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -153,6 +164,10 @@
 				359D201F29027810001AFA9D /* Double+.swift */,
 				359D202929027B52001AFA9D /* UITextField+.swift */,
 				359D202E29027DB3001AFA9D /* String+.swift */,
+				359D20302902887D001AFA9D /* DateFormatter+.swift */,
+				359D2032290288D9001AFA9D /* UIColor+.swift */,
+				359D203429028927001AFA9D /* UIView+.swift */,
+				359D203929029A16001AFA9D /* UILabel+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,7 +384,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3566080A28DDFE7E001848A8 /* CoinModel.swift in Sources */,
+				359D203729029896001AFA9D /* InvestmentCollectionViewCell.swift in Sources */,
 				356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */,
+				359D20312902887D001AFA9D /* DateFormatter+.swift in Sources */,
 				359D202C29027CB5001AFA9D /* NewsTableViewCell.swift in Sources */,
 				357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */,
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
@@ -378,12 +395,15 @@
 				359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
 				359D202329027860001AFA9D /* Transfers.swift in Sources */,
+				359D203A29029A16001AFA9D /* UILabel+.swift in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
 				357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */,
 				359D202F29027DB3001AFA9D /* String+.swift in Sources */,
 				359D201D28FF06CD001AFA9D /* WelcomeStackView.swift in Sources */,
 				359D201728FF049B001AFA9D /* UIFont+.swift in Sources */,
+				359D203529028927001AFA9D /* UIView+.swift in Sources */,
 				3566080828DDFE4E001848A8 /* NewsStoryModel.swift in Sources */,
+				359D2033290288D9001AFA9D /* UIColor+.swift in Sources */,
 				359D201128FEEE2E001AFA9D /* CoinTableViewCell.swift in Sources */,
 				35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */,
 				357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */,
