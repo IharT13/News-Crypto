@@ -25,6 +25,8 @@
 		359D202029027810001AFA9D /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201F29027810001AFA9D /* Double+.swift */; };
 		359D202329027860001AFA9D /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202229027860001AFA9D /* Transfers.swift */; };
 		359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202429027901001AFA9D /* TableHeaderStackView.swift */; };
+		359D202829027B29001AFA9D /* InvestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202729027B29001AFA9D /* InvestTextField.swift */; };
+		359D202A29027B52001AFA9D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202929027B52001AFA9D /* UITextField+.swift */; };
 		35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8028D5E68700079729 /* AppDelegate.swift */; };
 		35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8228D5E68700079729 /* SceneDelegate.swift */; };
 		35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8428D5E68700079729 /* MainTabBarController.swift */; };
@@ -57,6 +59,8 @@
 		359D201F29027810001AFA9D /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		359D202229027860001AFA9D /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
 		359D202429027901001AFA9D /* TableHeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderStackView.swift; sourceTree = "<group>"; };
+		359D202729027B29001AFA9D /* InvestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestTextField.swift; sourceTree = "<group>"; };
+		359D202929027B52001AFA9D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		35D25F7D28D5E68700079729 /* News&Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News&Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D25F8028D5E68700079729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D25F8228D5E68700079729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		359D201228FEEF43001AFA9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				359D202629027B00001AFA9D /* CustomTextField */,
 				359D201B28FF06BA001AFA9D /* HeaderSection */,
 				359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */,
 			);
@@ -141,6 +146,7 @@
 				359D201628FF049B001AFA9D /* UIFont+.swift */,
 				359D201928FF0542001AFA9D /* UIStackView+.swift */,
 				359D201F29027810001AFA9D /* Double+.swift */,
+				359D202929027B52001AFA9D /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -160,6 +166,14 @@
 				359D202229027860001AFA9D /* Transfers.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		359D202629027B00001AFA9D /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				359D202729027B29001AFA9D /* InvestTextField.swift */,
+			);
+			path = CustomTextField;
 			sourceTree = "<group>";
 		};
 		35D25F7428D5E68700079729 = {
@@ -352,6 +366,7 @@
 				356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */,
 				357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */,
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
+				359D202829027B29001AFA9D /* InvestTextField.swift in Sources */,
 				359D201428FEEF8F001AFA9D /* CryptoLineChartView.swift in Sources */,
 				359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
@@ -367,6 +382,7 @@
 				3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */,
 				359D202029027810001AFA9D /* Double+.swift in Sources */,
 				3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */,
+				359D202A29027B52001AFA9D /* UITextField+.swift in Sources */,
 				359D201A28FF0542001AFA9D /* UIStackView+.swift in Sources */,
 				3566080228DDF61D001848A8 /* WalletTableTableViewController.swift in Sources */,
 			);

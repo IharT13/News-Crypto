@@ -48,7 +48,7 @@ final class TableHeaderStackView: UIStackView {
     // MARK: Private
     
     private func addSubviews() {
-        addArrangedSubviews(coinLabel,
+        addAllArangedSubviews(coinLabel,
                             timelineLabel,
                             priceLabel)
     }
@@ -66,14 +66,14 @@ final class TableHeaderStackView: UIStackView {
     
     private func addDateLabelSetups() {
         coinLabel.text = "Coin"
-        coinLabel.font = .altone(15, .regular)
+        coinLabel.font = .montserrat(15, .regular)
         coinLabel.textAlignment = .left
         coinLabel.textColor = .gray
     }
     
     private func addTimelineLabelSetups() {
         timelineLabel.text = "Timeline"
-        timelineLabel.font = .altone(15, .regular)
+        timelineLabel.font = .montserrat(15, .regular)
         timelineLabel.textAlignment = .right
         timelineLabel.textColor = .gray
     }
@@ -81,7 +81,7 @@ final class TableHeaderStackView: UIStackView {
     private func addNotesLabelSetups() {
         priceLabel.text = "Price"
         priceLabel.textAlignment = .right
-        priceLabel.font = .altone(15, .regular)
+        priceLabel.font = .montserrat(15, .regular)
         priceLabel.textColor = .gray
     }
 }

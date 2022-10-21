@@ -188,13 +188,13 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     private func addSubviews() {
         addArrangedSubview(welcomeStackView)
-        welcomeStackView.addArrangedSubviews(welcomeLabel,
+        welcomeStackView.addAllArangedSubviews(welcomeLabel,
                                              personImageView)
-        addArrangedSubviews(countNotesLabel,
+        addAllArangedSubviews(countNotesLabel,
                             investmentsStackView,
                             investmentCollectionView,
                             tableHeaderStackView)
-        investmentsStackView.addArrangedSubviews(investmentsLabel,
+        investmentsStackView.addAllArangedSubviews(investmentsLabel,
                                                  investmentsImageView)
     }
     

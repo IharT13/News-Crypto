@@ -3,6 +3,8 @@ import Kingfisher
 
 final class CoinTableViewCell: UITableViewCell {
     
+    static let identifier = "CoinTableViewCell"
+    
     private let coinStackView = UIStackView()
     private let coinImageView = UIImageView()
     private let infoStackView = UIStackView()
