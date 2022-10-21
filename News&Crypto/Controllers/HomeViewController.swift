@@ -4,9 +4,13 @@ import FloatingPanel
 
 final class HomeViewController: UIViewController {
     
+    
+    var headerView = WelcomeStackView()
+    
     var coins = [CoinModel]() {
         didSet {
             cryptoTableView.reloadData()
+            headerView.coins = coins
         }
     }
     
