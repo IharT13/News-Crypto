@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		25C35CFEC8903404F83D115D /* Pods_News_Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04A53CEA37FD74161597F57 /* Pods_News_Crypto.framework */; };
 		350916882903429F00113A8E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350916872903429F00113A8E /* CoreDataManager.swift */; };
+		351BF07F290490B300871231 /* CapitalizationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF07E290490B300871231 /* CapitalizationStackView.swift */; };
+		351BF082290531E300871231 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF081290531E300871231 /* InfoView.swift */; };
+		351BF0842905320700871231 /* InfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0832905320700871231 /* InfoTextField.swift */; };
+		351BF0862905324D00871231 /* PersonImageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0852905324D00871231 /* PersonImageStackView.swift */; };
+		351BF0882905326700871231 /* SelectImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0872905326700871231 /* SelectImageCollectionViewCell.swift */; };
 		356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FD28DDF5D5001848A8 /* HomeViewController.swift */; };
 		3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FF28DDF5EB001848A8 /* SettingsViewController.swift */; };
 		3566080228DDF61D001848A8 /* WalletTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */; };
@@ -51,6 +56,11 @@
 /* Begin PBXFileReference section */
 		1A0EE22A049942FAF34CBF91 /* Pods-News&Crypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News&Crypto.release.xcconfig"; path = "Target Support Files/Pods-News&Crypto/Pods-News&Crypto.release.xcconfig"; sourceTree = "<group>"; };
 		350916872903429F00113A8E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		351BF07E290490B300871231 /* CapitalizationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalizationStackView.swift; sourceTree = "<group>"; };
+		351BF081290531E300871231 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		351BF0832905320700871231 /* InfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextField.swift; sourceTree = "<group>"; };
+		351BF0852905324D00871231 /* PersonImageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImageStackView.swift; sourceTree = "<group>"; };
+		351BF0872905326700871231 /* SelectImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		356607FD28DDF5D5001848A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		356607FF28DDF5EB001848A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableTableViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		351BF080290531D100871231 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				351BF081290531E300871231 /* InfoView.swift */,
+				351BF0832905320700871231 /* InfoTextField.swift */,
+				351BF0852905324D00871231 /* PersonImageStackView.swift */,
+				351BF0872905326700871231 /* SelectImageCollectionViewCell.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		356607FC28DDF5C0001848A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,9 +173,11 @@
 		359D201228FEEF43001AFA9D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				351BF080290531D100871231 /* Settings */,
 				359D202629027B00001AFA9D /* CustomTextField */,
 				359D201B28FF06BA001AFA9D /* HeaderSection */,
 				359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */,
+				351BF07E290490B300871231 /* CapitalizationStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -387,10 +410,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3566080A28DDFE7E001848A8 /* CoinModel.swift in Sources */,
+				351BF082290531E300871231 /* InfoView.swift in Sources */,
 				359D203729029896001AFA9D /* InvestmentCollectionViewCell.swift in Sources */,
 				356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */,
 				359D20312902887D001AFA9D /* DateFormatter+.swift in Sources */,
 				359D202C29027CB5001AFA9D /* NewsTableViewCell.swift in Sources */,
+				351BF07F290490B300871231 /* CapitalizationStackView.swift in Sources */,
 				357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */,
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
 				359D202829027B29001AFA9D /* InvestTextField.swift in Sources */,
@@ -401,6 +426,7 @@
 				359D202329027860001AFA9D /* Transfers.swift in Sources */,
 				359D203A29029A16001AFA9D /* UILabel+.swift in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
+				351BF0862905324D00871231 /* PersonImageStackView.swift in Sources */,
 				357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */,
 				359D202F29027DB3001AFA9D /* String+.swift in Sources */,
 				359D201D28FF06CD001AFA9D /* WelcomeStackView.swift in Sources */,
@@ -411,6 +437,8 @@
 				359D201128FEEE2E001AFA9D /* CoinTableViewCell.swift in Sources */,
 				35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */,
 				357B1D0528F4AACD005DCB0A /* NewsTableViewController.swift in Sources */,
+				351BF0882905326700871231 /* SelectImageCollectionViewCell.swift in Sources */,
+				351BF0842905320700871231 /* InfoTextField.swift in Sources */,
 				3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */,
 				359D202029027810001AFA9D /* Double+.swift in Sources */,
 				3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */,
