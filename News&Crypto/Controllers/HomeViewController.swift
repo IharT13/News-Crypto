@@ -1,30 +1,34 @@
-import UIKit
 import FloatingPanel
-
+import UIKit
 
 final class HomeViewController: UIViewController {
+    // MARK: - Properties
     
+    // MARK: Public
     
-    var headerView = WelcomeStackView()
-    
-    var coins = [CoinModel]() {
+    var coins: [CoinModel] = [] {
         didSet {
             cryptoTableView.reloadData()
             headerView.coins = coins
         }
     }
     
-    var wallets = [Wallet]() {
+    var wallets: [Wallet] = [] {
         didSet {
             cryptoTableView.reloadData()
         }
     }
     
-    private let refreshControl = UIRefreshControl()
-    private let panel = FloatingPanelController()
-    private let cryptoTableView = UITableView()
-    private let searchController = UISearchController()
+    var headerView = WelcomeStackView()
+
+    // MARK: Private
     
+    private let refreshControl: UIRefreshControl = .init()
+    private let panel: FloatingPanelController = .init()
+    private let cryptoTableView: UITableView = .init()
+    private let searchController: UISearchController = .init()
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,3 +155,4 @@ extension HomeViewController: TransferActionsBetweenVCDelegate {
         }
     }
 }
+

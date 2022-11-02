@@ -7,15 +7,15 @@ final class InfoView: UIView, NSFetchedResultsControllerDelegate {
     // MARK: Private
 
     private var profileFetchResultController: NSFetchedResultsController<Profile>!
-    private var profiles: [Profile] = []
-    private var profile: Profile = .init()
-    private var personImage: UIImage = .init()
-    private let mainStackView: UIStackView = .init()
-    private let nameTextField: InfoTextField = .init()
-    private let phoneNumberTextField: InfoTextField = .init()
-    private let dateTextField: InfoTextField = .init()
-    private let saveButton: UIButton = .init()
-    private let datePicker: UIDatePicker = .init()
+    private var profiles = [Profile]()
+    private var profile = Profile()
+    private var personImage = UIImage()
+    private let mainStackView = UIStackView()
+    private let nameTextField = InfoTextField()
+    private let phoneNumberTextField = InfoTextField()
+    private let dateTextField = InfoTextField()
+    private let saveButton = UIButton()
+    private let datePicker = UIDatePicker()
     
     // MARK: - LIfecycle
 
@@ -77,7 +77,7 @@ final class InfoView: UIView, NSFetchedResultsControllerDelegate {
     
     private func addSubviews() {
         addSubview(mainStackView)
-        mainStackView.addAllArangedSubviews(nameTextField,
+        mainStackView.addAllArrangedSubviews(nameTextField,
                                           phoneNumberTextField,
                                           dateTextField,
                                           saveButton)

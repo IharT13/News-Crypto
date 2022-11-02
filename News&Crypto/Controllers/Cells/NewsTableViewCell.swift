@@ -77,10 +77,10 @@ final class NewsTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.addSubview(newsView)
-        newsView.addSubview(mainStackView)
-        mainStackView.addAllArangedSubviews(newsImageView,
+        newsView.addSubviews(mainStackView)
+        mainStackView.addAllArrangedSubviews(newsImageView,
                                           infoStackView)
-        infoStackView.addAllArangedSubviews(titleLabel,
+        infoStackView.addAllArrangedSubviews(titleLabel,
                                           sourceAndDateLabel)
     }
     

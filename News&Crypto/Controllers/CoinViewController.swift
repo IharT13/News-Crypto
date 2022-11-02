@@ -10,8 +10,8 @@ final class CoinViewController: UIViewController {
     
     // MARK: Private
     
-    private let scrollView = UIScrollView()
-    private let mainStackView = UIStackView()
+    private let scrollView: UIScrollView = .init()
+    private let mainStackView: UIStackView = .init()
     private let chartView: CryptoLineChartView = .init()
     private let overviewAndWalletButtonStackView: UIStackView = .init()
     private let overviewLabel: UILabel = .init()
@@ -66,10 +66,10 @@ final class CoinViewController: UIViewController {
     private func addSubviews() {
         view.addSubviews(scrollView)
         scrollView.addSubview(mainStackView)
-        mainStackView.addAllArangedSubviews(chartView,
+        mainStackView.addAllArrangedSubviews(chartView,
                                           overviewAndWalletButtonStackView,
                                           capitalizationStackView)
-        overviewAndWalletButtonStackView.addAllArangedSubviews(overviewLabel,
+        overviewAndWalletButtonStackView.addAllArrangedSubviews(overviewLabel,
                                                              walletButton)
     }
     
@@ -123,7 +123,7 @@ final class CoinViewController: UIViewController {
     
     private func addInfoCoin() {
         let changeColor = (coin?.priceChangePercentage24H ?? 0.0 < 0)
-        chartView.configure(model:
+        chartView.configure(viewModel:
             .init(
                 data: coin?.sparklineIn7D?.price ?? [],
                 showLegend: true,
@@ -179,3 +179,4 @@ final class CoinViewController: UIViewController {
         walletButton.isHidden = true
     }
 }
+

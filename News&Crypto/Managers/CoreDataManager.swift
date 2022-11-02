@@ -2,14 +2,12 @@ import CoreData
 import UIKit
 
 final class CoreDataManager {
-    // MARK: - Properties
-
+    
     // MARK: Private
-
+    // MARK: - Properties
     static let instance = CoreDataManager()
 
     // MARK: - Commands
-    
     func saveInvestment(_ invest: Investment, _ symbol: String, _ name: String, _ investPrice: Double, _ targetPrice: Double, _ buyingPrice: Double) {
         var invest = invest
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {

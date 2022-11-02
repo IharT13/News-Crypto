@@ -5,9 +5,9 @@ final class InfoTextField: UIView {
 
     // MARK: Private
 
-    private let stackView: UIStackView = .init()
-    private let iconImageView: UIImageView = .init()
-    private let infoTextField: UITextField = .init()
+    private let stackView = UIStackView()
+    private let iconImageView = UIImageView()
+    private let infoTextField = UITextField()
     
     // MARK: Public
     
@@ -89,7 +89,7 @@ final class InfoTextField: UIView {
 
     private func addSubviews() {
         addSubview(stackView)
-        stackView.addAllArangedSubviews(iconImageView, infoTextField)
+        stackView.addAllArrangedSubviews(iconImageView, infoTextField)
     }
 
     private func addSetups() {

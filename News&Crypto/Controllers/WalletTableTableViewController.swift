@@ -1,91 +1,181 @@
-//
-//  WalletTableTableViewController.swift
-//  News&Crypto
-//
-//  Created by Игорь Тимофеев on 23.09.22.
-//
-
+import CoreData
 import UIKit
 
-class WalletTableTableViewController: UITableViewController {
+final class WalletTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    // MARK: - Properties
+
+    // MARK: Public
+
+    var coins: [CoinModel] = [] {
+        didSet {
+            coreDataSetups()
+            tableView.reloadData()
+        }
+    }
+
+    // MARK: Private
+
+    private var wallets: [Wallet] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+
+    private var fetchResultController: NSFetchedResultsController<Wallet>!
+    private var headerView: WalletStackView = .init()
+
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
+        addSetups()
+    }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+    // MARK: - CoreData
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    private func coreDataSetups() {
+        let fetchRequest: NSFetchRequest<Wallet> = Wallet.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "coinSymbol", ascending: false)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            let context = appDelegate.persistentContainer.viewContext
+            fetchResultController = NSFetchedResultsController(
+                fetchRequest: fetchRequest,
+                managedObjectContext: context,
+                sectionNameKeyPath: nil,
+                cacheName: nil
+            )
+            fetchResultController.delegate = self
+            do {
+                try fetchResultController.performFetch()
+                if let fetchedObjects = fetchResultController.fetchedObjects {
+                    wallets = fetchedObjects
+                    tableView.reloadData()
+                }
+            } catch {
+                print(error)
+            }
+        }
+    }
+
+    // MARK: - Setups
+
+    // MARK: Private
+
+    private func addSubviews() {}
+
+    private func addSetups() {
+        addHeaderView()
+        addTableViewSetups()
+    }
+
+    private func addTableViewSetups() {
+        tableView.separatorStyle = .none
+        tableView.register(WalletTableViewCell.self, forCellReuseIdentifier: WalletTableViewCell.identifier)
+    }
+
+    private func addHeaderView() {
+        headerView = WalletStackView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 60))
+        tableView.tableHeaderView = headerView
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return wallets.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: WalletTableViewCell.identifier, for: indexPath) as? WalletTableViewCell {
+            let wallet = wallets[indexPath.row]
+            for coin in coins {
+                if coin.symbol.uppercased() == wallet.coinSymbol?.uppercased() {
+                    let changeColor = (coin.priceChangePercentage24H ?? 0.0 < 0)
+                    cell.walletView.set(coin.name,
+                                        coin.symbol,
+                                        coin.image,
+                                        coin.currentPrice.asCurrencyWith6Decimals(),
+                                        coin.priceChangePercentage24H?.asPercentString() ?? "0.0",
+                                        changeColor ? .systemRed : .systemGreen,
+                                        .init(data: coin.sparklineIn7D?.price ?? [],
+                                              showLegend: false,
+                                              showAxis: false,
+                                              fillColor: changeColor ? .systemRed : .systemGreen),
+                                        changeColor ? Change.down.rawValue : Change.up.rawValue)
+                    return cell
+                }
+            }
+        }
+        return UITableViewCell()
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let coinVC = CoinViewController()
+        let wallet = wallets[indexPath.row]
+        for coin in coins {
+            if coin.symbol.uppercased() == wallet.coinSymbol?.uppercased() {
+                coinVC.coin = coin
+                coinVC.walletButton.isHidden = true
+            }
+        }
+        present(UINavigationController(rootViewController: coinVC), animated: true)
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    // MARK: Fetch request methods
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
     }
-    */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
     }
-    */
 
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            if let newIndexPath = newIndexPath {
+                tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+        case .update:
+            if let indexPath = indexPath {
+                tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+        default:
+            tableView.reloadData()
+        }
+
+        if let fetchedObjects = controller.fetchedObjects {
+            wallets = fetchedObjects as! [Wallet]
+        }
     }
-    */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
     }
-    */
 
+    // MARK: Add Delete button to TableView
+
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+            -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
+                guard let appDelegate = (UIApplication.shared.delegate as? AppDelegate) else { return }
+                let context = appDelegate.persistentContainer.viewContext
+                let movieDelete = self.fetchResultController.object(at: indexPath)
+                self.tableView.beginUpdates()
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                context.delete(movieDelete)
+                appDelegate.saveContext()
+                tableView.endUpdates()
+                completionHandler(true)
+            }
+            deleteAction.image = UIImage(systemName: "trash")
+            deleteAction.backgroundColor = .systemRed
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return configuration
+    }
 }

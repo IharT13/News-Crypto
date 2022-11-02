@@ -9,9 +9,9 @@ final class PersonImageStackView: UIStackView {
     
     // MARK: Private
     
-    private let personImageView: UIImageView = .init()
-    private let selectView: UIView = .init()
-    private let selectCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let personImageView = UIImageView()
+    private let selectView = UIView()
+    private lazy var selectCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     private let layout = UICollectionViewFlowLayout()
     private let massImage = Array(0 ... 19)
     
@@ -71,7 +71,7 @@ final class PersonImageStackView: UIStackView {
     // MARK: Private
     
     private func addSubviews() {
-        addAllArangedSubviews(personImageView, selectView)
+        addAllArrangedSubviews(personImageView, selectView)
         selectView.addSubview(selectCollectionView)
     }
     

@@ -84,10 +84,10 @@ final class AddInvestmentsViewController: UIViewController {
     private func addSubviews() {
         view.addSubview(scrollView)
         scrollView.addSubview(mainStackView)
-        mainStackView.addAllArangedSubviews(coinStackView,
+        mainStackView.addAllArrangedSubviews(coinStackView,
                                           investTextField,
                                           targetTextField)
-        coinStackView.addAllArangedSubviews(coinLabel,
+        coinStackView.addAllArrangedSubviews(coinLabel,
                                           coinTextField)
     }
     
@@ -231,6 +231,8 @@ final class AddInvestmentsViewController: UIViewController {
         if voidСheck() == true {
             if !isEditingInvestment {
                 saveInvestInfo()
+                let vc = HomeViewController()
+                present(vc, animated: true)
             } else {
                 setInvestInfo()
             }

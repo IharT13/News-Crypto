@@ -122,13 +122,13 @@ final class InvestmentsCollectionViewCell: UICollectionViewCell {
     private func addSubviews() {
         contentView.addSubview(investmentsView)
         investmentsView.addSubview(investmentsStackView)
-        investmentsStackView.addAllArangedSubviews(coinStackView,
+        investmentsStackView.addAllArrangedSubviews(coinStackView,
                                                  progressView,
                                                  infoStackView)
-        coinStackView.addAllArangedSubviews(coinImageView,
+        coinStackView.addAllArrangedSubviews(coinImageView,
                                           coinLabel,
                                           settingsImageView)
-        infoStackView.addAllArangedSubviews(investmentLabel,
+        infoStackView.addAllArrangedSubviews(investmentLabel,
                                           profitLabel)
     }
     
@@ -310,3 +310,4 @@ final class ResponsiveImageView: UIImageView {
         return true
     }
 }
+

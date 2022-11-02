@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		25C35CFEC8903404F83D115D /* Pods_News_Crypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04A53CEA37FD74161597F57 /* Pods_News_Crypto.framework */; };
 		350916882903429F00113A8E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350916872903429F00113A8E /* CoreDataManager.swift */; };
+		35103D6D291309E1009D7AF0 /* LoginRegistrController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35103D6C291309E1009D7AF0 /* LoginRegistrController.swift */; };
 		351BF07F290490B300871231 /* CapitalizationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF07E290490B300871231 /* CapitalizationStackView.swift */; };
 		351BF082290531E300871231 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF081290531E300871231 /* InfoView.swift */; };
 		351BF0842905320700871231 /* InfoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0832905320700871231 /* InfoTextField.swift */; };
 		351BF0862905324D00871231 /* PersonImageStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0852905324D00871231 /* PersonImageStackView.swift */; };
 		351BF0882905326700871231 /* SelectImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0872905326700871231 /* SelectImageCollectionViewCell.swift */; };
+		351BF08A290533A400871231 /* WalletStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF089290533A400871231 /* WalletStackView.swift */; };
+		351BF08C290533C300871231 /* WalletTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF08B290533C300871231 /* WalletTableViewCell.swift */; };
+		351BF08E290533EE00871231 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF08D290533EE00871231 /* WalletView.swift */; };
+		351BF0912905346100871231 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BF0902905346100871231 /* Enums.swift */; };
 		356607FE28DDF5D5001848A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FD28DDF5D5001848A8 /* HomeViewController.swift */; };
 		3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356607FF28DDF5EB001848A8 /* SettingsViewController.swift */; };
 		3566080228DDF61D001848A8 /* WalletTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */; };
@@ -56,11 +61,24 @@
 /* Begin PBXFileReference section */
 		1A0EE22A049942FAF34CBF91 /* Pods-News&Crypto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News&Crypto.release.xcconfig"; path = "Target Support Files/Pods-News&Crypto/Pods-News&Crypto.release.xcconfig"; sourceTree = "<group>"; };
 		350916872903429F00113A8E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		35103D6C291309E1009D7AF0 /* LoginRegistrController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegistrController.swift; sourceTree = "<group>"; };
 		351BF07E290490B300871231 /* CapitalizationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalizationStackView.swift; sourceTree = "<group>"; };
 		351BF081290531E300871231 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		351BF0832905320700871231 /* InfoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextField.swift; sourceTree = "<group>"; };
 		351BF0852905324D00871231 /* PersonImageStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonImageStackView.swift; sourceTree = "<group>"; };
 		351BF0872905326700871231 /* SelectImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		351BF089290533A400871231 /* WalletStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStackView.swift; sourceTree = "<group>"; };
+		351BF08B290533C300871231 /* WalletTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableViewCell.swift; sourceTree = "<group>"; };
+		351BF08D290533EE00871231 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		351BF0902905346100871231 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		351BF09829093ACF00871231 /* Altone-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Regular.ttf"; sourceTree = "<group>"; };
+		351BF09929093ACF00871231 /* Altone-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Bold.ttf"; sourceTree = "<group>"; };
+		351BF09A29093ACF00871231 /* Altone-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-ExtraBold.ttf"; sourceTree = "<group>"; };
+		351BF09B29093ACF00871231 /* Altone-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Medium.ttf"; sourceTree = "<group>"; };
+		351BF09C29093ACF00871231 /* Altone-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Light.ttf"; sourceTree = "<group>"; };
+		351BF09D29093ACF00871231 /* Altone-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-ExtraLight.ttf"; sourceTree = "<group>"; };
+		351BF09E29093ACF00871231 /* Altone-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-SemiBold.ttf"; sourceTree = "<group>"; };
+		351BF09F29093ACF00871231 /* Altone-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Altone-Thin.ttf"; sourceTree = "<group>"; };
 		356607FD28DDF5D5001848A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		356607FF28DDF5EB001848A8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTableTableViewController.swift; sourceTree = "<group>"; };
@@ -127,11 +145,44 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
+		351BF08F2905345200871231 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				351BF0902905346100871231 /* Enums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		351BF09529054FA000871231 /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				351BF08D290533EE00871231 /* WalletView.swift */,
+			);
+			path = Wallet;
+			sourceTree = "<group>";
+		};
+		351BF09629054FCA00871231 /* CapitalizationStackview */ = {
+			isa = PBXGroup;
+			children = (
+				351BF07E290490B300871231 /* CapitalizationStackView.swift */,
+			);
+			path = CapitalizationStackview;
+			sourceTree = "<group>";
+		};
+		351BF09729054FE500871231 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		356607FC28DDF5C0001848A8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				359D200F28FEEE1F001AFA9D /* Cells */,
 				35D25F8428D5E68700079729 /* MainTabBarController.swift */,
+				35103D6C291309E1009D7AF0 /* LoginRegistrController.swift */,
 				356607FD28DDF5D5001848A8 /* HomeViewController.swift */,
 				356607FF28DDF5EB001848A8 /* SettingsViewController.swift */,
 				3566080128DDF61D001848A8 /* WalletTableTableViewController.swift */,
@@ -166,6 +217,7 @@
 				359D201028FEEE2E001AFA9D /* CoinTableViewCell.swift */,
 				359D202B29027CB5001AFA9D /* NewsTableViewCell.swift */,
 				359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */,
+				351BF08B290533C300871231 /* WalletTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -174,10 +226,11 @@
 			isa = PBXGroup;
 			children = (
 				351BF080290531D100871231 /* Settings */,
+				351BF09529054FA000871231 /* Wallet */,
+				351BF09629054FCA00871231 /* CapitalizationStackview */,
 				359D202629027B00001AFA9D /* CustomTextField */,
+				351BF09729054FE500871231 /* Chart */,
 				359D201B28FF06BA001AFA9D /* HeaderSection */,
-				359D201328FEEF8F001AFA9D /* CryptoLineChartView.swift */,
-				351BF07E290490B300871231 /* CapitalizationStackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,14 +239,14 @@
 			isa = PBXGroup;
 			children = (
 				359D201628FF049B001AFA9D /* UIFont+.swift */,
+				359D2032290288D9001AFA9D /* UIColor+.swift */,
 				359D201928FF0542001AFA9D /* UIStackView+.swift */,
-				359D201F29027810001AFA9D /* Double+.swift */,
-				359D202929027B52001AFA9D /* UITextField+.swift */,
+				359D203429028927001AFA9D /* UIView+.swift */,
 				359D202E29027DB3001AFA9D /* String+.swift */,
 				359D20302902887D001AFA9D /* DateFormatter+.swift */,
-				359D2032290288D9001AFA9D /* UIColor+.swift */,
-				359D203429028927001AFA9D /* UIView+.swift */,
+				359D201F29027810001AFA9D /* Double+.swift */,
 				359D203929029A16001AFA9D /* UILabel+.swift */,
+				359D202929027B52001AFA9D /* UITextField+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,8 +254,9 @@
 		359D201B28FF06BA001AFA9D /* HeaderSection */ = {
 			isa = PBXGroup;
 			children = (
-				359D201C28FF06CD001AFA9D /* WelcomeStackView.swift */,
 				359D202429027901001AFA9D /* TableHeaderStackView.swift */,
+				359D201C28FF06CD001AFA9D /* WelcomeStackView.swift */,
+				351BF089290533A400871231 /* WalletStackView.swift */,
 			);
 			path = HeaderSection;
 			sourceTree = "<group>";
@@ -245,11 +299,12 @@
 			isa = PBXGroup;
 			children = (
 				359D20212902784B001AFA9D /* Protocols */,
+				3566080328DDFC84001848A8 /* Managers */,
+				351BF08F2905345200871231 /* Enums */,
+				35E75B2A28EE1CC300D7EB22 /* Font */,
 				359D201528FF048A001AFA9D /* Extensions */,
 				359D201228FEEF43001AFA9D /* Views */,
-				35E75B2A28EE1CC300D7EB22 /* Font */,
 				3566080628DDFE3B001848A8 /* Models */,
-				3566080328DDFC84001848A8 /* Managers */,
 				356607FC28DDF5C0001848A8 /* Controllers */,
 				35D25F8028D5E68700079729 /* AppDelegate.swift */,
 				35D25F8228D5E68700079729 /* SceneDelegate.swift */,
@@ -266,6 +321,14 @@
 			children = (
 				35E75B2C28EE1D0300D7EB22 /* Montserrat-Bold.ttf */,
 				35E75B2D28EE1D0300D7EB22 /* Montserrat-ExtraBold.ttf */,
+				351BF09929093ACF00871231 /* Altone-Bold.ttf */,
+				351BF09A29093ACF00871231 /* Altone-ExtraBold.ttf */,
+				351BF09D29093ACF00871231 /* Altone-ExtraLight.ttf */,
+				351BF09C29093ACF00871231 /* Altone-Light.ttf */,
+				351BF09B29093ACF00871231 /* Altone-Medium.ttf */,
+				351BF09829093ACF00871231 /* Altone-Regular.ttf */,
+				351BF09E29093ACF00871231 /* Altone-SemiBold.ttf */,
+				351BF09F29093ACF00871231 /* Altone-Thin.ttf */,
 				35E75B2E28EE1D0300D7EB22 /* Montserrat-Light.ttf */,
 				35E75B2F28EE1D0300D7EB22 /* Montserrat-Medium.ttf */,
 				35E75B2B28EE1D0300D7EB22 /* Montserrat-Regular.ttf */,
@@ -409,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35103D6D291309E1009D7AF0 /* LoginRegistrController.swift in Sources */,
 				3566080A28DDFE7E001848A8 /* CoinModel.swift in Sources */,
 				351BF082290531E300871231 /* InfoView.swift in Sources */,
 				359D203729029896001AFA9D /* InvestmentCollectionViewCell.swift in Sources */,
@@ -423,12 +487,15 @@
 				359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
 				350916882903429F00113A8E /* CoreDataManager.swift in Sources */,
+				351BF08E290533EE00871231 /* WalletView.swift in Sources */,
+				351BF08C290533C300871231 /* WalletTableViewCell.swift in Sources */,
 				359D202329027860001AFA9D /* Transfers.swift in Sources */,
 				359D203A29029A16001AFA9D /* UILabel+.swift in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
 				351BF0862905324D00871231 /* PersonImageStackView.swift in Sources */,
 				357B1D0328F4AAB0005DCB0A /* CoinViewController.swift in Sources */,
 				359D202F29027DB3001AFA9D /* String+.swift in Sources */,
+				351BF0912905346100871231 /* Enums.swift in Sources */,
 				359D201D28FF06CD001AFA9D /* WelcomeStackView.swift in Sources */,
 				359D201728FF049B001AFA9D /* UIFont+.swift in Sources */,
 				359D203529028927001AFA9D /* UIView+.swift in Sources */,
@@ -441,6 +508,7 @@
 				351BF0842905320700871231 /* InfoTextField.swift in Sources */,
 				3566080528DDFCB5001848A8 /* NetworkingManager.swift in Sources */,
 				359D202029027810001AFA9D /* Double+.swift in Sources */,
+				351BF08A290533A400871231 /* WalletStackView.swift in Sources */,
 				3566080028DDF5EB001848A8 /* SettingsViewController.swift in Sources */,
 				359D202A29027B52001AFA9D /* UITextField+.swift in Sources */,
 				359D201A28FF0542001AFA9D /* UIStackView+.swift in Sources */,

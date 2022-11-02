@@ -1,6 +1,6 @@
 import Foundation
 
-struct NewsStoryModel: Codable {
+struct NewsStory: Codable {
     let category: String
     let datetime: TimeInterval
     let headline: String

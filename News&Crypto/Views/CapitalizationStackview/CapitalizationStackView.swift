@@ -71,11 +71,11 @@ final class CapitalizationStackView: UIStackView {
     // MARK: Private
     
     private func addSubviews() {
-        addAllArangedSubviews(currentAndCapitalizationStackView,
+        addAllArrangedSubviews(currentAndCapitalizationStackView,
                             rankAndVolumeStackView)
-        currentAndCapitalizationStackView.addAllArangedSubviews(currentPriceLabel,
+        currentAndCapitalizationStackView.addAllArrangedSubviews(currentPriceLabel,
                                                               capitalizationLabel)
-        rankAndVolumeStackView.addAllArangedSubviews(rankLabel,
+        rankAndVolumeStackView.addAllArrangedSubviews(rankLabel,
                                                    volumeLabel)
     }
     

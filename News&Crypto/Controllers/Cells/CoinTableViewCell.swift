@@ -1,16 +1,21 @@
-import UIKit
 import Kingfisher
+import UIKit
 
 final class CoinTableViewCell: UITableViewCell {
+    // MARK: - Identifier
     
     static let identifier = "CoinTableViewCell"
     
-    private let coinStackView = UIStackView()
-    private let coinImageView = UIImageView()
-    private let infoStackView = UIStackView()
-    private let nameCoinLabel = UILabel()
-    private let symbolLabel = UILabel()
-    private let chart = CryptoLineChartView()
+    // MARK: - Properties
+    
+    // MARK: Private
+
+    private let coinStackView: UIStackView = .init()
+    private let coinImageView: UIImageView = .init()
+    private let infoStackView: UIStackView = .init()
+    private let nameCoinLabel: UILabel = .init()
+    private let symbolLabel: UILabel = .init()
+    private let chart: CryptoLineChartView = .init()
     private let priceStackView: UIStackView = .init()
     private let priceLabel: UILabel = .init()
     private let changeLabel: UILabel = .init()
@@ -20,25 +25,21 @@ final class CoinTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - Initialization
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        addCoinStackViewConstraints()
-        addCoinImageViewConstraints()
-        addChartViewConstraints()
-        addInfoStackViewConstraints()
+        addSubviews()
+        addSetups()
+        addConstraints()
     }
     
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        DispatchQueue.main.async { [weak self] in
-            self?.addCoinImageViewSetups()
-        }
-    }
+    // MARK: - API
     
     func set(_ image: String, _ nameCoin: String, _ symbol: String, _ price: String, _ change: String, _ color: UIColor, _ data: CryptoLineChartView.ViewModel) {
         coinImageView.kf.setImage(with: URL(string: image))
@@ -47,8 +48,21 @@ final class CoinTableViewCell: UITableViewCell {
         priceLabel.text = price
         changeLabel.text = change
         changeColor = color
-        chart.configure(model: data)
+        chart.configure(viewModel: data)
     }
+    
+    // MARK: - Lifecycle
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        DispatchQueue.main.async { [weak self] in
+            self?.addCoinImageViewSetups()
+        }
+    }
+    
+    // MARK: - Constraints
+    
+    // MARK: Private
     
     private func addConstraints() {
         addCoinStackViewConstraints()
@@ -88,13 +102,13 @@ final class CoinTableViewCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.addSubview(coinStackView)
-        coinStackView.addAllArangedSubviews(coinImageView,
+        coinStackView.addAllArrangedSubviews(coinImageView,
                                           infoStackView,
                                           chart,
                                           priceStackView)
-        infoStackView.addAllArangedSubviews(nameCoinLabel,
+        infoStackView.addAllArrangedSubviews(nameCoinLabel,
                                           symbolLabel)
-        priceStackView.addAllArangedSubviews(priceLabel,
+        priceStackView.addAllArrangedSubviews(priceLabel,
                                            changeLabel)
     }
     
@@ -141,25 +155,21 @@ final class CoinTableViewCell: UITableViewCell {
     }
     
     private func addNameCoinLabelSetups() {
-       // nameCoinLabel.font = .altone(17, .medium)
         nameCoinLabel.font = .montserrat(17, .medium)
     }
     
     private func addSymbolLabelSetups() {
-      //  symbolLabel.font = .altone(15, .light)
-        nameCoinLabel.font = .montserrat(15, .regular)
+        symbolLabel.font = .montserrat(15, .regular)
         symbolLabel.textColor = .gray
     }
     
     private func addPriceLabelSetups() {
-      //  priceLabel.font = .altone(16, .medium)
         priceLabel.font = .montserrat(16, .medium)
         priceLabel.adjustsFontSizeToFitWidth = true
         priceLabel.minimumScaleFactor = 0.5
     }
     
     private func addChangeLabelSetups() {
-      //  changeLabel.font = .altone(13, .regular)
         changeLabel.font = .montserrat(13, .regular)
     }
     
@@ -168,5 +178,3 @@ final class CoinTableViewCell: UITableViewCell {
         chart.isUserInteractionEnabled = false
     }
 }
-
-

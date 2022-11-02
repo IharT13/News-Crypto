@@ -1,5 +1,5 @@
-import UIKit
 import CoreData
+import UIKit
 
 final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     // MARK: - Properties
@@ -188,13 +188,13 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     private func addSubviews() {
         addArrangedSubview(welcomeStackView)
-        welcomeStackView.addAllArangedSubviews(welcomeLabel,
+        welcomeStackView.addAllArrangedSubviews(welcomeLabel,
                                              personImageView)
-        addAllArangedSubviews(countNotesLabel,
+        addAllArrangedSubviews(countNotesLabel,
                             investmentsStackView,
                             investmentCollectionView,
                             tableHeaderStackView)
-        investmentsStackView.addAllArangedSubviews(investmentsLabel,
+        investmentsStackView.addAllArrangedSubviews(investmentsLabel,
                                                  investmentsImageView)
     }
     
@@ -240,7 +240,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     private func addInvestmentsLabelSetups() {
         investmentsLabel.text = "My Investments"
-        investmentsLabel.font = .montserrat(20, .medium)
+        investmentsLabel.font = .altone(20, .medium1)
     }
     
     private func addCountNotesLabelSetups() {
@@ -251,7 +251,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     }
     
     private func addWelcomeLabelSetups() {
-        welcomeLabel.font = .montserrat(15, .regular)
+        welcomeLabel.font = .altone(15, .light)
         welcomeLabel.textColor = .gray
     }
     
@@ -295,11 +295,11 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
         dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.title!,
-            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
+            NSAttributedString.Key.font: UIFont.altone(30, .bold1)
         ]
         let secondAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.accent!,
-            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
+            NSAttributedString.Key.font: UIFont.altone(30, .bold1)
         ]
         
         let firstString = NSMutableAttributedString(string: "You have ", attributes: firstAttributes)

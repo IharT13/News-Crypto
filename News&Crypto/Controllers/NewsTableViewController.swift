@@ -6,7 +6,7 @@ final class NewsTableViewController: UITableViewController {
     
     // MARK: Private
     
-    private var news: [NewsStoryModel] = [] {
+    private var news: [NewsStory] = [] {
         didSet {
             tableView.reloadData()
         }
@@ -116,3 +116,4 @@ final class NewsTableViewController: UITableViewController {
         open(url: url)
     }
 }
+

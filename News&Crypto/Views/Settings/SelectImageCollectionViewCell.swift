@@ -9,7 +9,7 @@ final class SelectImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: Private
     
-    private let personImageView: UIImageView = .init()
+    private let personImageView = UIImageView()
     
     // MARK: Public
     

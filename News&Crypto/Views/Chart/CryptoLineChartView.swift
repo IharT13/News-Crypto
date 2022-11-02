@@ -2,6 +2,9 @@ import UIKit
 import Charts
 
 final class CryptoLineChartView: UIView {
+    // MARK: - Properties
+    
+    // MARK: Private
     
     private let chartView = LineChartView()
     
@@ -12,41 +15,56 @@ final class CryptoLineChartView: UIView {
         let fillColor: UIColor
     }
     
+    //MARK: - Initialization
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        addSubviews()
+        addSetups()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
     
-    func configure(model: ViewModel) {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        chartView.frame = bounds
+    }
+    
+    // MARK: - API
+    
+    func configure(viewModel: ViewModel) {
         var entries = [ChartDataEntry]()
-        
-        for (index, value) in model.data.enumerated() {
+        for (index, value) in viewModel.data.enumerated() {
             entries.append(.init(x: Double(index), y: value))
         }
         
-        chartView.rightAxis.enabled = model.showAxis
-        chartView.legend.enabled = model.showLegend
+        chartView.rightAxis.enabled = viewModel.showAxis
+        chartView.legend.enabled = viewModel.showLegend
         
-        let dataSet = LineChartDataSet(entries: entries, label: "7 days")
+        let dataSet = LineChartDataSet(entries: entries, label: "7 Days")
         
         dataSet.drawFilledEnabled = true
         dataSet.drawIconsEnabled = false
         dataSet.drawValuesEnabled = false
         dataSet.drawCirclesEnabled = false
-        dataSet.setColor(model.fillColor)
+        dataSet.setColor(viewModel.fillColor)
         
-        let gradientColors = [model.fillColor.cgColor, UIColor.clear.cgColor] as CFArray
-        let colorLocations: [CGFloat] = [0.8, 0.0]
+        let gradientColors = [viewModel.fillColor.cgColor, UIColor.clear.cgColor] as CFArray
+        let colorLocations:[CGFloat] = [0.8, 0.0]
         let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
-        dataSet.fill = LinearGradientFill(gradient: gradient!, angle: 90.0)
+        dataSet.fill = LinearGradientFill(gradient: gradient! , angle: 90.0)
         dataSet.drawFilledEnabled = true
         let data = LineChartData(dataSet: dataSet)
         chartView.data = data
     }
+    
+    // MARK: - Setups
+    
+    // MARK: Private
     
     private func addSubviews() {
         addSubview(chartView)

@@ -62,7 +62,7 @@ final class SettingsViewController: UIViewController {
     private func addSubviews() {
         view.addSubview(scrollView)
         scrollView.addSubview(mainStackView)
-        mainStackView.addAllArangedSubviews(profileLabel,
+        mainStackView.addAllArrangedSubviews(profileLabel,
                                           personImage,
                                           infoView)
     }
@@ -85,3 +85,4 @@ final class SettingsViewController: UIViewController {
         profileLabel.font = .montserrat(35, .bold)
     }
 }
+

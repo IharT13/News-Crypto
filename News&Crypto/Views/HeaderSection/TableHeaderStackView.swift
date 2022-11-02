@@ -5,9 +5,9 @@ final class TableHeaderStackView: UIStackView {
     
     // MARK: Private
     
-    private let coinLabel: UILabel = .init()
-    private let priceLabel: UILabel = .init()
-    private let timelineLabel: UILabel = .init()
+    private let coinLabel = UILabel()
+    private let priceLabel = UILabel()
+    private let timelineLabel = UILabel()
     
     // MARK: - Initialization
     
@@ -48,7 +48,7 @@ final class TableHeaderStackView: UIStackView {
     // MARK: Private
     
     private func addSubviews() {
-        addAllArangedSubviews(coinLabel,
+        addAllArrangedSubviews(coinLabel,
                             timelineLabel,
                             priceLabel)
     }

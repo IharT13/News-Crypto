@@ -5,8 +5,8 @@ final class InvestTextField: UIStackView {
 
     // MARK: Private
     
-    private let label: UILabel = UILabel()
-    private let textField: UITextField = UITextField()
+    private let label = UILabel()
+    private let textField = UITextField()
     
     var text: String {
            get {
@@ -64,7 +64,7 @@ final class InvestTextField: UIStackView {
     // MARK: Private
     
     private func addSubviews() {
-        addAllArangedSubviews(label,
+        addAllArrangedSubviews(label,
                             textField)
     }
     
