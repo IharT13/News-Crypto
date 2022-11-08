@@ -35,14 +35,9 @@ final class NewsTableViewController: UITableViewController {
     private func addSubviews() {}
     
     private func addSetups() {
-        // addNavigationSetups()
+//        addNavigationSetups()
         addTableViewSetups()
         addTableHeaderView()
-    }
-    
-    private func addNavigationSetups() {
-        title = "Business News"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     private func addTableViewSetups() {
@@ -56,7 +51,7 @@ final class NewsTableViewController: UITableViewController {
             frame: CGRect(
                 x: 0,
                 y: 0,
-                width: 250,
+                width: 350,
                 height: 70))
         let label = UILabel(
             frame: CGRect(
@@ -81,6 +76,7 @@ final class NewsTableViewController: UITableViewController {
             preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
         present(alert, animated: true)
+        
     }
     
     private func open(url: URL) {

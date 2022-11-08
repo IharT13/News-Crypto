@@ -23,10 +23,10 @@ final class HomeViewController: UIViewController {
 
     // MARK: Private
     
-    private let refreshControl: UIRefreshControl = .init()
-    private let panel: FloatingPanelController = .init()
-    private let cryptoTableView: UITableView = .init()
-    private let searchController: UISearchController = .init()
+    private let refreshControl = UIRefreshControl()
+    private let panel = FloatingPanelController()
+    private let cryptoTableView = UITableView()
+    private let searchController = UISearchController()
 
     // MARK: - Lifecycle
 

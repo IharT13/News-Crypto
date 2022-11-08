@@ -5,12 +5,12 @@ final class CapitalizationStackView: UIStackView {
     
     // MARK: Private
 
-    private let currentAndCapitalizationStackView: UIStackView = .init()
-    private let currentPriceLabel: UILabel = .init()
-    private let capitalizationLabel: UILabel = .init()
-    private let rankAndVolumeStackView: UIStackView = .init()
-    private let rankLabel: UILabel = .init()
-    private let volumeLabel: UILabel = .init()
+    private let currentAndCapitalizationStackView = UIStackView()
+    private let currentPriceLabel = UILabel()
+    private let capitalizationLabel = UILabel()
+    private let rankAndVolumeStackView = UIStackView()
+    private let rankLabel = UILabel()
+    private let volumeLabel = UILabel()
     
     // MARK: - Initialization
     
@@ -40,23 +40,23 @@ final class CapitalizationStackView: UIStackView {
     
     // MARK: - API
     
-    func setCurrentPriceLabel(_ price: String, _ change: String, _ color: UIColor) {
+    public func setCurrentPriceLabel(_ price: String, _ change: String, _ color: UIColor) {
         currentPriceLabel.attributedText = modificatorForCurrentPriceLabel(price,
                                                                            change,
                                                                            color)
     }
     
-    func setCapitalizationLabel(_ price: String, _ change: String, _ color: UIColor) {
+    public func setCapitalizationLabel(_ price: String, _ change: String, _ color: UIColor) {
         capitalizationLabel.attributedText = modificatorForCapitalizationLabel(price,
                                                                                change,
                                                                                color)
     }
     
-    func setRankLabel(_ rank: Int) {
+    public func setRankLabel(_ rank: Int) {
         rankLabel.attributedText = modificatorForRankLabel(rank)
     }
     
-    func setVolumeLabel(_ volume: String) {
+    public func setVolumeLabel(_ volume: String) {
         volumeLabel.attributedText = modificatorForVolumeLabel(volume)
     }
     

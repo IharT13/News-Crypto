@@ -180,21 +180,14 @@ final class InfoView: UIView, NSFetchedResultsControllerDelegate {
     @objc func saveNamegiver() {
         personImage = PersonImageStackView.image
         let date = formatter(.medium).date(from: dateTextField.text)!
+        
         if isEmptyFields() == false {
-            if profiles.count == 0 {
-                CoreDataManager.instance.saveProfile(profile,
-                                                     nameTextField.text,
-                                                     phoneNumberTextField.text,
-                                                     date,
-                                                     personImage)
-            } else if profiles.count != 0 {
+         if profiles.count != 0 {
                 profiles[0].name = nameTextField.text
                 profiles[0].phoneNumber = phoneNumberTextField.text
                 profiles[0].date = date
                 profiles[0].image = personImage.pngData()
-                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
-                    appDelegate.saveContext()
-                }
+    
             }
         } else {
             print("Please fill in all fields!")

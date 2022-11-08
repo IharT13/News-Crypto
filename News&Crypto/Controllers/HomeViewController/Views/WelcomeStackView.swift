@@ -6,7 +6,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     // MARK: Public
     
-    let tableHeaderStackView: TableHeaderStackView = .init()
+    private let tableHeaderStackView = TableHeaderStackView()
     weak var delegate: TransferActionsBetweenVCDelegate?
     var invests: [Investment] = [] {
         didSet {
@@ -18,7 +18,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     // MARK: Private
     
     private var fetchResultController: NSFetchedResultsController<Investment>!
-    var coins: [CoinModel] = [] {
+    public var coins: [CoinModel] = [] {
         didSet {
             investmentCollectionView.reloadData()
         }
@@ -31,14 +31,14 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
         }
     }
     
-    private let welcomeStackView: UIStackView = .init()
-    private let welcomeLabel: UILabel = .init()
-    private let personImageView: UIImageView = .init()
-    private let countNotesLabel: UILabel = .init()
-    private let investmentsStackView: UIStackView = .init()
-    private let investmentsLabel: UILabel = .init()
-    private let investmentsImageView: UIImageView = .init()
-    private let investmentCollectionView: UICollectionView = .init(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    private let welcomeStackView = UIStackView()
+    private let welcomeLabel = UILabel()
+    private let personImageView = UIImageView()
+    private let countNotesLabel = UILabel()
+    private let investmentsStackView = UIStackView()
+    private let investmentsLabel = UILabel()
+    private let investmentsImageView = UIImageView()
+    private let investmentCollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     private let layout = UICollectionViewFlowLayout()
     
     // MARK: - Initialization
@@ -240,7 +240,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     
     private func addInvestmentsLabelSetups() {
         investmentsLabel.text = "My Investments"
-        investmentsLabel.font = .altone(20, .medium1)
+        investmentsLabel.font = .montserrat(20, .bold)
     }
     
     private func addCountNotesLabelSetups() {
@@ -251,7 +251,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     }
     
     private func addWelcomeLabelSetups() {
-        welcomeLabel.font = .altone(15, .light)
+        welcomeLabel.font = .montserrat(15, .bold)
         welcomeLabel.textColor = .gray
     }
     
@@ -295,11 +295,11 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
         dateFormatter.dateFormat = "dd MMMM"
         let firstAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.title!,
-            NSAttributedString.Key.font: UIFont.altone(30, .bold1)
+            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
         ]
         let secondAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.accent!,
-            NSAttributedString.Key.font: UIFont.altone(30, .bold1)
+            NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
         ]
         
         let firstString = NSMutableAttributedString(string: "You have ", attributes: firstAttributes)
@@ -372,6 +372,7 @@ extension WelcomeStackView: UICollectionViewDelegate, UICollectionViewDataSource
                 investmentCollectionView.reloadItems(at: [indexPath])
             }
         default:
+            
             investmentCollectionView.reloadData()
         }
         if let fetchedObjects = controller.fetchedObjects {

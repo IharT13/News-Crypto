@@ -6,17 +6,17 @@ final class CoinViewController: UIViewController {
     // MARK: Public
     
     var coin: CoinModel?
-    let walletButton: UIButton = .init()
+    let walletButton = UIButton()
     
     // MARK: Private
     
-    private let scrollView: UIScrollView = .init()
-    private let mainStackView: UIStackView = .init()
-    private let chartView: CryptoLineChartView = .init()
-    private let overviewAndWalletButtonStackView: UIStackView = .init()
-    private let overviewLabel: UILabel = .init()
-    private let capitalizationStackView: CapitalizationStackView = .init()
-    private var wallet: Wallet = .init()
+    private let scrollView = UIScrollView()
+    private let mainStackView = UIStackView()
+    private let chartView = CryptoLineChartView()
+    private let overviewAndWalletButtonStackView = UIStackView()
+    private let overviewLabel = UILabel()
+    private let capitalizationStackView = CapitalizationStackView()
+    private var wallet = Wallet()
     
     // MARK: - Lifecycle
     

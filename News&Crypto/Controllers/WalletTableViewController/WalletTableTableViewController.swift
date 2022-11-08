@@ -22,7 +22,7 @@ final class WalletTableViewController: UITableViewController, NSFetchedResultsCo
     }
 
     private var fetchResultController: NSFetchedResultsController<Wallet>!
-    private var headerView: WalletStackView = .init()
+    private var headerView = WalletStackView()
 
     // MARK: - Lifecycle
 

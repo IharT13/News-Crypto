@@ -19,14 +19,14 @@ final class AddInvestmentsViewController: UIViewController {
     
     private var nameCoin: String?
     private var priceCoin: Double?
-    private let scrollView: UIScrollView = .init()
-    private let mainStackView: UIStackView = .init()
-    private let coinStackView: UIStackView = .init()
-    private let coinLabel: UILabel = .init()
-    private let coinTextField: UITextField = .init()
-    private let investTextField: InvestTextField = .init()
-    private let targetTextField: InvestTextField = .init()
-    private let coinPickerView: UIPickerView = .init()
+    private let scrollView = UIScrollView()
+    private let mainStackView = UIStackView()
+    private let coinStackView = UIStackView()
+    private let coinLabel = UILabel()
+    private let coinTextField = UITextField()
+    private let investTextField = InvestTextField()
+    private let targetTextField = InvestTextField()
+    private let coinPickerView = UIPickerView()
     
     // MARK: - Lifecycle
 

@@ -10,16 +10,16 @@ final class CoinTableViewCell: UITableViewCell {
     
     // MARK: Private
 
-    private let coinStackView: UIStackView = .init()
-    private let coinImageView: UIImageView = .init()
-    private let infoStackView: UIStackView = .init()
-    private let nameCoinLabel: UILabel = .init()
-    private let symbolLabel: UILabel = .init()
-    private let chart: CryptoLineChartView = .init()
-    private let priceStackView: UIStackView = .init()
-    private let priceLabel: UILabel = .init()
-    private let changeLabel: UILabel = .init()
-    private var changeColor: UIColor = .init() {
+    private let coinStackView = UIStackView()
+    private let coinImageView = UIImageView()
+    private let infoStackView = UIStackView()
+    private let nameCoinLabel = UILabel()
+    private let symbolLabel = UILabel()
+    private let chart = CryptoLineChartView()
+    private let priceStackView = UIStackView()
+    private let priceLabel = UILabel()
+    private let changeLabel = UILabel()
+    private var changeColor = UIColor() {
         didSet {
             changeLabel.textColor = changeColor
         }

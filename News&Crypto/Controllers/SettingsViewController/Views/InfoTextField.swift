@@ -42,13 +42,13 @@ final class InfoTextField: UIView {
     
     // MARK: - API
     
-    func configurator(_ image: String, _ placeholder: String, _ type: UIKeyboardType = .default) {
+    public func configurator(_ image: String, _ placeholder: String, _ type: UIKeyboardType = .default) {
         iconImageView.image = UIImage(systemName: image)
         infoTextField.placeholder = placeholder
         infoTextField.keyboardType = type
     }
     
-    func date(_ image: String, toolbar: UIToolbar, inputView: UIView) {
+    public func date(_ image: String, toolbar: UIToolbar, inputView: UIView) {
         iconImageView.image = UIImage(systemName: image)
         infoTextField.inputAccessoryView = toolbar
         infoTextField.inputView = inputView

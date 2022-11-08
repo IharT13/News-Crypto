@@ -11,22 +11,22 @@ final class InvestmentsCollectionViewCell: UICollectionViewCell {
     
     // MARK: Public
     
-    var deleteHandler: (() -> ())?
-    var editHandler: (() -> ())?
+    var deleteHandler: (() -> Void)?
+    var editHandler: (() -> Void)?
     
     // MARK: Private
 
-    private let investmentsView: UIView = .init()
-    private let investmentsStackView: UIStackView = .init()
-    private let coinStackView: UIStackView = .init()
-    private let coinImageView: UIImageView = .init()
-    private let confettiView: ConfettiView = .init()
-    private let coinLabel: UILabel = .init()
-    private let settingsImageView: ResponsiveImageView = .init()
-    private let progressView: UIProgressView = .init()
-    private let infoStackView: UIStackView = .init()
-    private let investmentLabel: UILabel = .init()
-    private let profitLabel: UILabel = .init()
+    private let investmentsView = UIView()
+    private let investmentsStackView = UIStackView()
+    private let coinStackView = UIStackView()
+    private let coinImageView = UIImageView()
+    private let confettiView = ConfettiView()
+    private let coinLabel = UILabel()
+    private let settingsImageView = ResponsiveImageView()
+    private let progressView = UIProgressView()
+    private let infoStackView = UIStackView()
+    private let investmentLabel = UILabel()
+    private let profitLabel = UILabel()
     
     // MARK: - Initialization
     

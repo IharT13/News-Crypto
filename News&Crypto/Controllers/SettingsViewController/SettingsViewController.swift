@@ -5,11 +5,11 @@ final class SettingsViewController: UIViewController {
 
     // MARK: Private
     
-    private let scrollView: UIScrollView = .init()
-    private let mainStackView: UIStackView = .init()
-    private let profileLabel: UILabel = .init()
-    private let personImage: PersonImageStackView = .init()
-    private let infoView: InfoView = .init()
+    private let scrollView = UIScrollView()
+    private let mainStackView = UIStackView()
+    private let profileLabel = UILabel()
+    private let personImage = PersonImageStackView()
+    private let infoView = InfoView()
 
     // MARK: - Lifecycle
 

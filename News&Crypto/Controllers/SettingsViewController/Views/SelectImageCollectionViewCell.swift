@@ -40,7 +40,7 @@ final class SelectImageCollectionViewCell: UICollectionViewCell {
     
     // MARK: - API
     
-    func set(_ image: String) {
+    public func set(_ image: String) {
         personImageView.image = UIImage(named: image)
     }
     

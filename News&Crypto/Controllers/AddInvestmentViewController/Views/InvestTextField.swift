@@ -40,7 +40,7 @@ final class InvestTextField: UIStackView {
     
     // MARK: - API
     
-    func configurator(_ txt: String, _ type: UIKeyboardType = .default, _ image: String) {
+    public func configurator(_ txt: String, _ type: UIKeyboardType = .default, _ image: String) {
         label.text = txt
         textField.keyboardType = type
         textField.leftViewMode = UITextField.ViewMode.always

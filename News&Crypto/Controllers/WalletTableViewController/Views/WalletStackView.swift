@@ -5,7 +5,7 @@ final class WalletStackView: UIStackView {
     
     // MARK: Private
     
-    private let walletLabel: UILabel = .init()
+    private let walletLabel = UILabel()
     
     // MARK: - Initialization
     

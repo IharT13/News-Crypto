@@ -10,12 +10,12 @@ final class NewsTableViewCell: UITableViewCell {
     
     // MARK: Private
     
-    private let newsView: UIView = .init()
-    private let mainStackView: UIStackView = .init()
-    private let newsImageView: UIImageView = .init()
-    private let infoStackView: UIStackView = .init()
-    private let titleLabel: UILabel = .init()
-    private let sourceAndDateLabel: UILabel = .init()
+    private let newsView = UIView()
+    private let mainStackView = UIStackView()
+    private let newsImageView = UIImageView()
+    private let infoStackView = UIStackView()
+    private let titleLabel = UILabel()
+    private let sourceAndDateLabel = UILabel()
     
     // MARK: - Lifecycle
 
