@@ -293,6 +293,7 @@ final class WelcomeStackView: UIStackView, NSFetchedResultsControllerDelegate {
     private func modificatorForCountNotesLabel(_ count: Int = 0) -> NSMutableAttributedString {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM"
+        dateFormatter.locale = Locale(identifier: "en_EN")
         let firstAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.foregroundColor: UIColor.theme.title!,
             NSAttributedString.Key.font: UIFont.montserrat(30, .bold)
