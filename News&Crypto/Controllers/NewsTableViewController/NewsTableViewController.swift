@@ -35,7 +35,6 @@ final class NewsTableViewController: UITableViewController {
     private func addSubviews() {}
     
     private func addSetups() {
-//        addNavigationSetups()
         addTableViewSetups()
         addTableHeaderView()
     }

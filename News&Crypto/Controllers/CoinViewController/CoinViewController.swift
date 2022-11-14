@@ -5,8 +5,8 @@ final class CoinViewController: UIViewController {
     
     // MARK: Public
     
-    var coin: CoinModel?
-    let walletButton = UIButton()
+    public var coin: CoinModel?
+    public let walletButton = UIButton()
     
     // MARK: Private
     

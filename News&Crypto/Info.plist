@@ -5,14 +5,6 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Montserrat-Bold.ttf</string>
-		<string>Altone-Bold.ttf</string>
-		<string>Altone-ExtraBold.ttf</string>
-		<string>Altone-ExtraLight.ttf</string>
-		<string>Altone-Light.ttf</string>
-		<string>Altone-Medium.ttf</string>
-		<string>Altone-Regular.ttf</string>
-		<string>Altone-SemiBold.ttf</string>
-		<string>Altone-Thin.ttf</string>
 		<string>Montserrat-ExtraBold.ttf</string>
 		<string>Montserrat-Light.ttf</string>
 		<string>Montserrat-Medium.ttf</string>

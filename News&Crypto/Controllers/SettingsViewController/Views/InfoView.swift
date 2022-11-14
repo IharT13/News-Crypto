@@ -119,6 +119,7 @@ final class InfoView: UIView, NSFetchedResultsControllerDelegate {
             // Fallback on earlier versions
         }
         datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "EN_en")
         let toolBar = UIToolbar()
         toolBar.sizeToFit()
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneButtonClick))
