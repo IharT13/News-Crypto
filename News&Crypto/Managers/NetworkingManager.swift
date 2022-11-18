@@ -7,7 +7,7 @@ final class NetworkingManager {
 
     // MARK: - Enums
     private enum Constants: String {
-        case apiKey = "&token=c9m61diad3i9qg80n940"
+        case apiKey = "&token=cdr8p8qad3i0p7dfl510cdr8p8qad3i0p7dfl51g"
         case newsBaseUrl = "https://finnhub.io/api/v1/"
         case coinBaseUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=true&price_change_percentage=24h"
     }
