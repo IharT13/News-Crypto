@@ -2,7 +2,7 @@ import Alamofire
 import Foundation
 
 final class NetworkingManager {
-    // MARK: - Instance
+    // MARK: - Shared
     static let shared = NetworkingManager()
 
     // MARK: - Enums
