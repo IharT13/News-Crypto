@@ -40,7 +40,7 @@ final class SettingsViewController: UIViewController {
     
     private func addMainStackViewConstraints() {
         mainStackView.translatesAutoresizingMaskIntoConstraints = false
-        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10).isActive = true
+        mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 70).isActive = true
         mainStackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -10).isActive = true
         mainStackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
         mainStackView.heightAnchor.constraint(equalToConstant: 535).isActive = true
@@ -48,7 +48,10 @@ final class SettingsViewController: UIViewController {
     
     private func addPersonImageAndInfoHeightConstraints() {
         profileLabel.translatesAutoresizingMaskIntoConstraints = false
-        profileLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        profileLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        profileLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        profileLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        profileLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 1/8).isActive = true
         personImage.translatesAutoresizingMaskIntoConstraints = false
         personImage.heightAnchor.constraint(equalToConstant: 190).isActive = true
         infoView.translatesAutoresizingMaskIntoConstraints = false
@@ -60,10 +63,10 @@ final class SettingsViewController: UIViewController {
     // MARK: Private
     
     private func addSubviews() {
-        view.addSubview(scrollView)
+        view.addSubviews(scrollView,
+                         profileLabel)
         scrollView.addSubview(mainStackView)
-        mainStackView.addAllArrangedSubviews(profileLabel,
-                                          personImage,
+        mainStackView.addAllArrangedSubviews(personImage,
                                           infoView)
     }
     
@@ -81,8 +84,13 @@ final class SettingsViewController: UIViewController {
     }
     
     private func addProfileLabelSetups() {
-        profileLabel.text = "Your Profile 👽"
-        profileLabel.font = .montserrat(35, .bold)
+        profileLabel.text = "Profile"
+        profileLabel.font = .montserrat(24, .bold)
+        profileLabel.textAlignment = .center
+        profileLabel.backgroundColor = .theme.cellColor
+        profileLabel.layer.cornerRadius = 20
+        profileLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        profileLabel.layer.masksToBounds = true
     }
 }
 

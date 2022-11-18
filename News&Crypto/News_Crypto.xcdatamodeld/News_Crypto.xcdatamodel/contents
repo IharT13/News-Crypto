@@ -17,8 +17,8 @@
         <attribute name="coinSymbol" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Investment" positionX="-63" positionY="-18" width="128" height="104"/>
-        <element name="Profile" positionX="-54" positionY="27" width="128" height="89"/>
-        <element name="Wallet" positionX="-36" positionY="54" width="128" height="44"/>
+        <element name="Investment" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Profile" positionX="-188.91796875" positionY="212.5390625" width="128" height="103"/>
+        <element name="Wallet" positionX="-425.1015625" positionY="215.06640625" width="128" height="58"/>
     </elements>
 </model>
