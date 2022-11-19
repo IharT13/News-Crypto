@@ -33,7 +33,7 @@
 		359D201A28FF0542001AFA9D /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201928FF0542001AFA9D /* UIStackView+.swift */; };
 		359D201D28FF06CD001AFA9D /* WelcomeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201C28FF06CD001AFA9D /* WelcomeStackView.swift */; };
 		359D202029027810001AFA9D /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D201F29027810001AFA9D /* Double+.swift */; };
-		359D202329027860001AFA9D /* Transfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202229027860001AFA9D /* Transfers.swift */; };
+		359D202329027860001AFA9D /* DelegateTransfers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202229027860001AFA9D /* DelegateTransfers.swift */; };
 		359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202429027901001AFA9D /* TableHeaderStackView.swift */; };
 		359D202829027B29001AFA9D /* InvestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202729027B29001AFA9D /* InvestTextField.swift */; };
 		359D202A29027B52001AFA9D /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D202929027B52001AFA9D /* UITextField+.swift */; };
@@ -84,7 +84,7 @@
 		359D201928FF0542001AFA9D /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		359D201C28FF06CD001AFA9D /* WelcomeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeStackView.swift; sourceTree = "<group>"; };
 		359D201F29027810001AFA9D /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
-		359D202229027860001AFA9D /* Transfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfers.swift; sourceTree = "<group>"; };
+		359D202229027860001AFA9D /* DelegateTransfers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateTransfers.swift; sourceTree = "<group>"; };
 		359D202429027901001AFA9D /* TableHeaderStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderStackView.swift; sourceTree = "<group>"; };
 		359D202729027B29001AFA9D /* InvestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestTextField.swift; sourceTree = "<group>"; };
 		359D202929027B52001AFA9D /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
@@ -202,7 +202,7 @@
 		359D20212902784B001AFA9D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				359D202229027860001AFA9D /* Transfers.swift */,
+				359D202229027860001AFA9D /* DelegateTransfers.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -351,12 +351,12 @@
 		35D25F7F28D5E68700079729 /* News&Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				359D20212902784B001AFA9D /* Protocols */,
-				3566080628DDFE3B001848A8 /* Models */,
-				3566080328DDFC84001848A8 /* Managers */,
-				351BF08F2905345200871231 /* Enums */,
-				35E75B2A28EE1CC300D7EB22 /* Font */,
 				359D201528FF048A001AFA9D /* Extensions */,
+				351BF08F2905345200871231 /* Enums */,
+				3566080328DDFC84001848A8 /* Managers */,
+				359D20212902784B001AFA9D /* Protocols */,
+				35E75B2A28EE1CC300D7EB22 /* Font */,
+				3566080628DDFE3B001848A8 /* Models */,
 				359D201228FEEF43001AFA9D /* Views */,
 				356607FC28DDF5C0001848A8 /* Controllers */,
 				35D25F8028D5E68700079729 /* AppDelegate.swift */,
@@ -533,7 +533,7 @@
 				350916882903429F00113A8E /* CoreDataManager.swift in Sources */,
 				351BF08E290533EE00871231 /* WalletView.swift in Sources */,
 				351BF08C290533C300871231 /* WalletTableViewCell.swift in Sources */,
-				359D202329027860001AFA9D /* Transfers.swift in Sources */,
+				359D202329027860001AFA9D /* DelegateTransfers.swift in Sources */,
 				359D203A29029A16001AFA9D /* UILabel+.swift in Sources */,
 				35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */,
 				351BF0862905324D00871231 /* PersonImageStackView.swift in Sources */,
