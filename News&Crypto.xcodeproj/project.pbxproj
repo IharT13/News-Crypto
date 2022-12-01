@@ -44,6 +44,7 @@
 		359D203529028927001AFA9D /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203429028927001AFA9D /* UIView+.swift */; };
 		359D203729029896001AFA9D /* InvestmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */; };
 		359D203A29029A16001AFA9D /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359D203929029A16001AFA9D /* UILabel+.swift */; };
+		35BA326829392AAD00FB0541 /* EasyAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BA326729392AAD00FB0541 /* EasyAutolayout.swift */; };
 		35D25F8128D5E68700079729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8028D5E68700079729 /* AppDelegate.swift */; };
 		35D25F8328D5E68700079729 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8228D5E68700079729 /* SceneDelegate.swift */; };
 		35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D25F8428D5E68700079729 /* MainTabBarController.swift */; };
@@ -95,6 +96,7 @@
 		359D203429028927001AFA9D /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		359D203629029896001AFA9D /* InvestmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		359D203929029A16001AFA9D /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		35BA326729392AAD00FB0541 /* EasyAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EasyAutolayout.swift; sourceTree = "<group>"; };
 		35D25F7D28D5E68700079729 /* News&Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "News&Crypto.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35D25F8028D5E68700079729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35D25F8228D5E68700079729 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		359D20212902784B001AFA9D /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				35BA326729392AAD00FB0541 /* EasyAutolayout.swift */,
 				359D202229027860001AFA9D /* DelegateTransfers.swift */,
 			);
 			path = Protocols;
@@ -527,6 +530,7 @@
 				357B1D0728F4ABFF005DCB0A /* AddInvestmentsViewController.swift in Sources */,
 				35D25F8528D5E68700079729 /* MainTabBarController.swift in Sources */,
 				359D202829027B29001AFA9D /* InvestTextField.swift in Sources */,
+				35BA326829392AAD00FB0541 /* EasyAutolayout.swift in Sources */,
 				359D201428FEEF8F001AFA9D /* CryptoLineChartView.swift in Sources */,
 				359D202529027901001AFA9D /* TableHeaderStackView.swift in Sources */,
 				35D25F8B28D5E68700079729 /* News_Crypto.xcdatamodeld in Sources */,
