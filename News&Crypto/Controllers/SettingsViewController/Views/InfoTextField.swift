@@ -26,7 +26,7 @@ final class InfoTextField: UIView {
         }
     }
 
-    // MARK: - LIfecycle
+    // MARK: - Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
