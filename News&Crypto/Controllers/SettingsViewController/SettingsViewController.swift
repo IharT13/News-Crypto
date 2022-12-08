@@ -91,6 +91,10 @@ final class SettingsViewController: UIViewController {
         profileLabel.layer.cornerRadius = 20
         profileLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         profileLabel.layer.masksToBounds = true
+        
+        
+        
+        
     }
 }
 
